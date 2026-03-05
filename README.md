@@ -20,23 +20,20 @@ The application maintains a **version-based word frequency index** where each ve
 - **Diff Query** – Compares the frequency of a word between two file versions.
 - Efficient file processing using **buffered reading**.
 - Case-insensitive word matching.
-
+  
 ## Usage
 
 Compile the program using a C++ compiler:
 
-    g++ -std=c++17 main.cpp -o 240650_devarsh
+    g++ -std=c++17 main.cpp -o indexer
 
 Run the program using command-line arguments:
 
 ### Word Query
-
-    .\240650_devarsh.exe --file <file> --version <version> --buffer <size> --query word --word <word>
+    .\indexer.exe --file <file> --version <version> --buffer <size> --query word --word <word>
 
 ### Top-K Query
-
-    .\240650_devarsh.exe --file <file> --version <version> --buffer <size> --query top --top <K>
+    .\indexer.exe --file <file> --version <version> --buffer <size> --query top --top <K>
 
 ### Diff Query
-
-    .\240650_devarsh.exe --file1 <file1> --version1 <v1> --file2 <file2> --version2 <v2> --buffer <size> --query diff --word <word>
+    .\indexer.exe --file1 <file1> --version1 <v1> --file2 <file2> --version2 <v2> --buffer <size> --query diff --word <word>
